@@ -1,0 +1,42 @@
+name: example-geospatial-env
+channels:
+  - conda-forge # Use conda forge first -- better for geospatial packages
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+  
+  # Core scientific python
+  - numpy
+  - pandas
+
+  # Geospatial libraries
+  # Coordinates and CRSs
+  - pyproj>=3.0 # pyproj>=3.0 is required for proj>=8.0
+  # Vector data
+  - geopandas
+  - geojson # GeoJSON support for geopandas
+  - pyogrio # Fast reading and writing of vector data
+  # Raster data
+  - xarray # N-dimensional arrays, often used for raster data
+  - rioxarray # Raster I/O and processing
+  
+  # Interactive computing
+  - ipython # Needed for Jupyter notebooks
+  - nbconvert # Convert Jupyter notebooks to other formats like HTML or PDF
+  
+  # Plotting
+  # Matplotlib
+  - matplotlib
+  - seaborn
+  # Holoviews
+  # --- Avoid compatibility issues with bokeh and new holoviews
+  - holoviews<=1.19
+  - hvplot
+  - geoviews>=1.10
+  
+  # Uncomment the following lines to install additional packages via pip
+  # These packages are not available in conda-forge or defaults channels
+  # - pip:
+  #   - pip-package-here

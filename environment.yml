@@ -13,7 +13,7 @@ dependencies:
 
   # Geospatial libraries
   # Coordinates and CRSs
-  - pyproj>=3.0 # pyproj>=3.0 is required for proj>=8.0
+  - pyproj>=3.0
   # Vector data
   - geopandas
   - geojson # GeoJSON support for geopandas
